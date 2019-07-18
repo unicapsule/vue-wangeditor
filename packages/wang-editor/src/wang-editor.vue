@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import E from 'wangeditor'
+import E from 'wangeditorplus'
 
 export default {
   name: 'wang-editor',

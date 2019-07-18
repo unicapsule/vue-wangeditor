@@ -11,7 +11,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "wangeditor": "https://github.com/GallenHu/wangEditor.git#dev-standalone"
+    "wangeditorplus": "https://github.com/GallenHu/wangEditor.git#dev-standalone"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
