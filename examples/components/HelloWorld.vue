@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <wang-editor />
+    <wang-editor :menus="menus" locale="lang-zh" />
   </div>
 </template>
 
@@ -9,6 +9,25 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      menus: [
+        'underline',
+        'fontSize',
+        'fontColor',
+        'backColor',
+        'removeformat',
+        'spliter',
+
+        'justify',
+        'indent',
+        'lineHeight',
+        'orderedList',
+        'list',
+        'quote',
+      ],
+    }
   },
 }
 </script>

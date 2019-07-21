@@ -6,7 +6,7 @@ yarn add https://github.com/GallenHu/vue-wangeditor.git
 
 add dependent script
 ```html
-<script src="https://gitcdn.xyz/repo/GallenHu/wangEditor/dev-standalone/release/separated/dependent.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/unicapsule/editor@dev-standalone/release/separated/dependent.js"></script>
 ```
 
 ## Usage
@@ -28,6 +28,16 @@ page.vue
   </div>
 </template>
 ```
+
+## Props
+详细说明参考 [配置文件](https://github.com/unicapsule/editor/blob/dev-standalone/src/js/config.example.js)
+| props | 说明 |类型
+| :----  | :----  | ---- |
+| menus | 配置菜单 | Array
+| locale | 语言 | String
+| geoService | 地理位置接口 API KEY | Object
+| debug | Debug  模式| Boolean
+
 
 ## ref
 https://juejin.im/post/5bbab9de5188255c8c0cb0e3
