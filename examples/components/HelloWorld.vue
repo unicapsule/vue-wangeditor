@@ -4,7 +4,11 @@
       <wang-editor :menus="menus" locale="lang-zh" @change="onChange" />
     </div>
     <div class="right">
-      <textarea class="result" v-model="content"></textarea>
+      <textarea
+        class="result"
+        v-model="content"
+        placeholder="HTML result"
+      ></textarea>
     </div>
   </div>
 </template>
