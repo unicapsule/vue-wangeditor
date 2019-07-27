@@ -4,11 +4,6 @@
 yarn add https://github.com/GallenHu/vue-wangeditor.git
 ```
 
-add dependent script
-```html
-<script src="https://cdn.jsdelivr.net/gh/unicapsule/editor@dev-standalone/release/separated/dependent.js"></script>
-```
-
 ## Usage
 
 main.js
@@ -24,7 +19,7 @@ page.vue
 ```html
 <template>
   <div class="editor">
-    <wang-editor />
+    <wang-editor @change="onChange" :menus="menus" />
   </div>
 </template>
 ```
@@ -38,6 +33,15 @@ page.vue
 | geoService | 地理位置接口 API KEY | Object
 | debug | Debug  模式| Boolean
 
+## Events
+| events | 说明 |
+| :----  | :----  |
+| change | 内容变化时触发 |
+
+## Dev
+```sh
+yarn serve
+```
 
 ## ref
 https://juejin.im/post/5bbab9de5188255c8c0cb0e3

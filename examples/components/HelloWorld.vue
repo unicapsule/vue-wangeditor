@@ -1,6 +1,11 @@
 <template>
   <div class="hello">
-    <wang-editor :menus="menus" locale="lang-zh" />
+    <div class="left">
+      <wang-editor :menus="menus" locale="lang-zh" @change="onChange" />
+    </div>
+    <div class="right">
+      <textarea class="result" v-model="content"></textarea>
+    </div>
   </div>
 </template>
 
@@ -12,6 +17,7 @@ export default {
   },
   data() {
     return {
+      content: '',
       menus: [
         'underline',
         'fontSize',
@@ -26,8 +32,15 @@ export default {
         'orderedList',
         'list',
         'quote',
+        'youtube',
+        'fullsize',
       ],
     }
+  },
+  methods: {
+    onChange(html) {
+      this.content = html
+    },
   },
 }
 </script>
@@ -47,5 +60,16 @@ li {
 }
 a {
   color: #42b983;
+}
+.left {
+  width: 600px;
+  float: left;
+}
+.right {
+  margin-left: 700px;
+}
+.result {
+  width: 300px;
+  height: 330px;
 }
 </style>
