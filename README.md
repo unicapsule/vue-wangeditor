@@ -26,12 +26,14 @@ page.vue
 
 ## Props
 详细说明参考 [配置文件](https://github.com/unicapsule/editor/blob/dev-standalone/src/js/config.example.js)
+
 | props | 说明 |类型
-| :----  | :----  | ---- |
-| menus | 配置菜单 | Array
-| locale | 语言 | String
-| geoService | 地理位置接口 API KEY | Object
-| debug | Debug  模式| Boolean
+| :----  | :----  | :---- |
+| menus | 配置菜单 | Array |
+| locale | 语言 | String |
+| geoService | 地理位置接口 API KEY | Object |
+| debug | Debug  模式| Boolean |
+
 
 ## Events
 | events | 说明 |
