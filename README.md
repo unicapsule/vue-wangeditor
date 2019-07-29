@@ -41,6 +41,11 @@ page.vue
 | :----  | :----  |
 | onChange(html, originalHtml) | 内容变化时触发，回调参数返回HTML内容(`originalHtml` 适用于还原编辑器 html 内容，更好的配合 `defaultContent` Props) |
 
+## Methods
+| methods | 说明 |
+| :----  | :----  |
+| insertContent(html) | 向编辑区插入内容 |
+
 ## Dev
 ```sh
 yarn serve

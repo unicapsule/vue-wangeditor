@@ -32,6 +32,11 @@ export default {
     debug: Boolean,
     defaultContent: String,
   },
+  data() {
+    return {
+      editor: null,
+    }
+  },
   mounted() {
     if (this.debug) {
       console.warn('vue-wangeditor mounted.')
@@ -69,6 +74,14 @@ export default {
       }
       editor.create()
       if (this.defaultContent) editor.txt.html(this.defaultContent)
+      this.editor = editor
+    },
+    insertContent(html) {
+      if (!this.editor) {
+        console.error('no editor instance!')
+        return
+      }
+      this.editor.txt.html(html)
     },
   },
 }

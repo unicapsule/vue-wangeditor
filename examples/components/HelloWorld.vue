@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="left">
-      <wang-editor :menus="menus" :debug="true" :default-content="d" locale="lang-zh" @change="onChange" />
+      <wang-editor ref="we" :menus="menus" :debug="true" :default-content="d" locale="lang-zh" @change="onChange" />
     </div>
     <div class="right">
       <textarea
@@ -9,6 +9,12 @@
         v-model="content"
         placeholder="HTML result"
       ></textarea>
+    </div>
+
+    <br>
+
+    <div>
+      <button @click="ins">insert content</button>
     </div>
   </div>
 </template>
@@ -46,6 +52,9 @@ export default {
     onChange(html, originalHtml) {
       this.content = html
       console.log(originalHtml)
+    },
+    ins() {
+      this.$refs.we.insertContent('<p>test</p>')
     },
   },
 }
