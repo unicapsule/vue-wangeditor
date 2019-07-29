@@ -32,10 +32,21 @@ export default {
     debug: Boolean,
   },
   mounted() {
+    if (this.debug) {
+      console.warn('vue-wangeditor mounted.')
+      console.warn('window.$di18n', window.$di18n)
+      console.warn('window.axios', window.axios)
+    }
     if (!window.$di18n || !window.axios || !window.screenfull) {
+      if (this.debug) {
+        console.warn('start load dependent...')
+      }
       getScript(
         'https://cdn.jsdelivr.net/gh/unicapsule/editor@dev-standalone/release/separated/dependent.js',
         () => {
+          if (this.debug) {
+            console.warn('load dependent success!')
+          }
           this.initEditor()
         }
       )

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="left">
-      <wang-editor :menus="menus" locale="lang-zh" @change="onChange" />
+      <wang-editor :menus="menus" :debug="true" locale="lang-zh" @change="onChange" />
     </div>
     <div class="right">
       <textarea
