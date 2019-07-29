@@ -33,12 +33,13 @@ page.vue
 | locale | 语言 | String |
 | geoService | 地理位置接口 API KEY | Object |
 | debug | Debug  模式| Boolean |
+| defaultContent | 编辑器默认内容| Boolean |
 
 
 ## Events
 | events | 说明 |
 | :----  | :----  |
-| change | 内容变化时触发 |
+| onChange(html, originalHtml) | 内容变化时触发，回调参数返回HTML内容(`originalHtml` 适用于还原编辑器 html 内容，更好的配合 `defaultContent` Props) |
 
 ## Dev
 ```sh

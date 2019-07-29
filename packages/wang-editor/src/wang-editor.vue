@@ -30,6 +30,7 @@ export default {
     locale: String,
     geoService: Object,
     debug: Boolean,
+    defaultContent: String,
   },
   mounted() {
     if (this.debug) {
@@ -64,9 +65,10 @@ export default {
       if (this.locale) editor.customConfig.locale = this.locale
       if (this.geoService) editor.customConfig.geoService = this.geoService
       editor.customConfig.onchange = () => {
-        this.$emit('change', editor.txt.html())
+        this.$emit('change', editor.txt.html(), editor.txt.getOriginalHtml())
       }
       editor.create()
+      if (this.defaultContent) editor.txt.html(this.defaultContent)
     },
   },
 }

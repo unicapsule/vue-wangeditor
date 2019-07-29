@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="left">
-      <wang-editor :menus="menus" :debug="true" locale="lang-zh" @change="onChange" />
+      <wang-editor :menus="menus" :debug="true" :default-content="d" locale="lang-zh" @change="onChange" />
     </div>
     <div class="right">
       <textarea
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       content: '',
+      d: `<p>fda</p>`,
       menus: [
         'underline',
         'fontSize',
@@ -42,8 +43,9 @@ export default {
     }
   },
   methods: {
-    onChange(html) {
+    onChange(html, originalHtml) {
       this.content = html
+      console.log(originalHtml)
     },
   },
 }
