@@ -43,6 +43,9 @@ page.vue
 ## Dev
 ```sh
 yarn serve
+
+# build for lib!
+yarn lib
 ```
 
 ## ref
